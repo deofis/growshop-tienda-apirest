@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.deofis</groupId>
-    <artifactId>tienda-apirest</artifactId>
+    <artifactId>tienda-apirest-demo</artifactId>
     <version>0.3.0-RELEASE</version>
-    <name>tienda-apirest</name>
+    <name>tienda-apirest-demo</name>
     <description>Apirest para el sistema de tienda online de Deofis.</description>
 
     <properties>
