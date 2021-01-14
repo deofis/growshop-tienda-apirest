@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/deofis_dev?allowPublicKeyRetrieval=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=America/Argentina/Cordoba
+    username: dev
+    password: userdev1295
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  mail:
+    host: smtp.mailtrap.io
+    port: 2525
+    username: eb1eece6b19a9c
+    password: ed814f343a2257
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+endpoints:
+  baseUrl: http://localhost:8080
+  clientUrl: http://localhost:4200
+
+amazon:
+  s3:
+    bucketName: deofis-images-bucket
+    endpoint: https://deofis-images-bucket.s3.eu-west-2.amazonaws.com/
+    accessKey: ENC(G8IyhZeQLap2yXU26oMJmcfmwkeEKfvIFId40bmsUvs=)
+    secretKey: ENC(c/9xHbxVjYPRv5i0krzKvejyw/0L2gB6GQ9bCIvy6adYN67uK7WTJGwBwHUogDjhSw6MQyZdRVM=)
+
+jwt:
+  expirationInMillis: 3600000
+
+server:
+  port: ${PORT:8080}
