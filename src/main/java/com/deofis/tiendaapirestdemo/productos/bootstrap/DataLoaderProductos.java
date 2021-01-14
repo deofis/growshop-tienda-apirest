@@ -4,7 +4,8 @@ import com.deofis.tiendaapirestdemo.productos.domain.Categoria;
 import com.deofis.tiendaapirestdemo.productos.domain.Subcategoria;
 import com.deofis.tiendaapirestdemo.productos.domain.UnidadMedida;
 import com.deofis.tiendaapirestdemo.productos.exceptions.ProductoException;
-import com.deofis.tiendaapirestdemo.productos.repositories.*;
+import com.deofis.tiendaapirestdemo.productos.repositories.CategoriaRepository;
+import com.deofis.tiendaapirestdemo.productos.repositories.UnidadMedidaRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -18,12 +19,8 @@ import java.util.List;
 public class DataLoaderProductos implements CommandLineRunner {
 
     private final UnidadMedidaRepository unidadMedidaRepository;
-    private final MarcaRepository marcaRepository;
 
     private final CategoriaRepository categoriaRepository;
-    private final SubcategoriaRepository subcategoriaRepository;
-    private final ProductoRepository productoRepository;
-
 
     @Override
     public void run(String... args) throws Exception {
