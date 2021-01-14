@@ -1,0 +1,20 @@
+package com.deofis.tiendaapirestdemo;
+
+import com.deofis.tiendaapirestdemo.config.SwaggerConfiguration;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Import;
+import org.springframework.scheduling.annotation.EnableAsync;
+
+@SpringBootApplication
+@EnableAsync
+@Import(SwaggerConfiguration.class)
+@EnableConfigurationProperties
+public class TiendaApirestApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(TiendaApirestApplication.class, args);
+    }
+
+}
