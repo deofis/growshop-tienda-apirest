@@ -30,7 +30,7 @@ spring:
 
 endpoints:
   baseUrl: https://demo.deofisdev.online
-  clientUrl: http://localhost:4200 #Cambiar al tener app cliente desplegada.
+  clientUrl: https://tienda-online-demo.web.app
 
 amazon:
   s3:
